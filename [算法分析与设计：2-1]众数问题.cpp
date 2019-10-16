@@ -27,7 +27,7 @@
 #include <iostream>
 using namespace std;
 
-int largest=0; //重数
+int largest=0; //众数的重数
 int element=0; //众数
 
 int hx_median(int *a,int &l,int &r) {
@@ -62,11 +62,11 @@ void hx_mode(int *a,int l,int r) {
     
     if(l1-l>largest) {
         hx_mode(a,l,l1-1);
-    }//如果左边的个数大于当前重数的个数，则真正的重数可能在左边
+    }//如果左边的个数大于当前重数的个数，则众数可能在左边
     
     if(r-r1>largest) {
         hx_mode(a,r1+1,r);
-    }//如果右边的个数大于当前重数的个数，则真正的重数可能在右边
+    }//如果右边的个数大于当前重数的个数，则众数可能在右边
 }
 
 int main(int argc, const char * argv[]) {
